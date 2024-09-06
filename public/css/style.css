@@ -1,0 +1,11 @@
+/* .navbar .nav li .dropdown-menu li a {
+    white-space: normal !important;
+} */
+.navbar .nav li .dropdown-menu li a {
+    max-width:300px !important;
+  }
+
+.navbar{
+    height: 5rem;
+    margin-bottom: 2rem;
+}
