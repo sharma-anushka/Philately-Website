@@ -48,3 +48,14 @@
     justify-content: space-around !important;
     /* align-items: center; */
 }
+
+.pp{
+    border-radius: 100%;
+    height: 10rem;
+    width: 10rem;
+    align-items: center;
+}
+
+.pi{
+    height: 20rem;
+}

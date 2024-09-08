@@ -10,7 +10,8 @@ const User = require("./models/user");
 const session = require("express-session");
 const flash = require("connect-flash");
 const { savedRedirectUrl } = require("./middleware");
-
+const Bidding = require("./models/bidding");
+const Blog = require("./models/blogs");
 
 async function main() {
   await mongoose.connect('mongodb://127.0.0.1:27017/assam');
@@ -67,11 +68,14 @@ app.get("/products/assam/:id", async (req,res) => {
 })
 
 //community
-app.get("/community", (req,res) => {
-    res.render("community.ejs");
+app.get("/community/main", async (req,res) => {
+    const blogs = await Blog.find();
+    res.render("community/main.ejs",{blogs});
 })
 
-
+app.get("/community/profile", (req,res) => {
+    res.render("community/profile.ejs");
+})
 //signup
 app.get("/signup",(req, res) => {
     res.render("users/signup.ejs");
@@ -112,9 +116,26 @@ app.get("/account/philatelicDeposit", (req,res) => {
 })
 
 //bidding-events-quizzes
-app.get("/features/bidding", (req,res) => {
-    res.render("features/bidding.ejs");
+app.get("/features/bidding", async (req,res) => {
+    const bidding = await Bidding.find();
+    console.log(bidding);
+    res.render("features/bidding.ejs", {bidding});
 })
+
+app.get("/features/events", (req,res) => {
+    res.render("features/events.ejs");
+})
+
+app.get("/features/quiz", (req,res) => {
+    res.render("features/quiz.ejs");
+})
+
+//map
+app.get("/map", (req,res) => {
+    res.render("map.ejs");
+})
+
+
 
 app.listen(8080, () =>{
     console.log("server listening");
