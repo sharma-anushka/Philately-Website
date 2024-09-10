@@ -1,0 +1,37 @@
+<% layout("layouts/boilerplate")%>
+<div class="bidding-page">
+<body>
+    <br>
+    <div class="row">
+        <div class="col-12 text-center">
+            <a href="/features/events"><button type="button" class="btn btn-info">Events</button></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/features/quiz"><button type="button" class="btn btn-info">Quizzes</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/features/bidding"><button type="button" class="btn btn-info">Bidding</button></a>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="container-fluid col-6">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+    <br><br>
+    <div class="row">
+        <% for(let bid of bidding) { %>
+            <div class="col-4">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><%=bid.productName%></h5>
+                        <img src="<%= bid.url %>" class="img-fluid rounded-top" alt="Image Not Found">
+                        <p class="card-text"><small class="text-body-secondary">No. of Bids: <%= bid.numberOfBids%></small></p>
+                        <p class="card-text"><small class="text-body-secondary">Average Bid: <%= bid.averageBid%></small></p>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</body>
+</div>

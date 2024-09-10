@@ -1,0 +1,78 @@
+<% layout("layouts/boilerplate") %>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<div class="blog-page">
+<body><br><br>
+    <div class="row">
+        <div class="col-3">
+            <div class="list-group">
+                <a href="/" class="list-group-item list-group-item-action " aria-current="true">
+                Home
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">Notifications</a>
+                <a href="#" class="list-group-item list-group-item-action">Communites</a>
+                <a href="/community/profile" class="list-group-item list-group-item-action">Profile</a>
+                
+            </div>
+        </div>
+        <div class="col-6">
+            <% for(let blog of blogs) { %>
+                <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title"><i class="fa-solid fa-user"></i>  &nbsp;&nbsp;&nbsp; <%=blog.username%></h5>
+                      <p class="card-text"><small class="text-body-secondary"><i class="fa-solid fa-circle"></i><i> &nbsp;&nbsp;&nbsp;edited 2 hour ago</i></small></p>
+                      <h6 class="card-title"><%=blog.title%></h6>
+                      <p class="card-text"><%=blog.blog%></p>
+                      <p class="card-text"><small class="text-body-secondary"><%=blog.postingTime%></small></p>
+                    </div>
+                    <img src="<%=blog.image.url1%>" class="card-img-bottom" alt="...">
+                  </div><br><br>
+            <% } %>
+            <!--  -->
+        </div>
+        <div class="col-3">
+            <div class="card">
+                <div class="card-body">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                      </form>
+                      <div>
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                        Rarest Stamps
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                        Delhi November Exhibit
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                        Philately Museum
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</div>
+
+<script>
+document.querySelectorAll('.card img').forEach(element => {
+  element.addEventListener('mousemove', (e) => {
+    const rect = element.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const deltaX = (x - centerX) / centerX;
+    const deltaY = (y - centerY) / centerY;
+    const tiltX = deltaY * 10; // Adjust the tilt amount
+    const tiltY = -deltaX * 10; // Adjust the tilt amount
+
+    element.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+  });
+
+  element.addEventListener('mouseleave', () => {
+    element.style.transform = 'rotateX(0deg) rotateY(0deg)'; // Reset on mouse leave
+  });
+});
+</script>

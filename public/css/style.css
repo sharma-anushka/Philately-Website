@@ -1,0 +1,1285 @@
+.assam{
+    border: solid black;
+}
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+.f-info-links, .f-info-socials, .f-info-brand {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.f-info-socials{    
+    font-size: 1.2rem;
+    /* margin-right: 1rem; */
+}
+
+.f-info-socials i{
+    padding-right: 1rem;
+    margin-right: 5 rem; 
+}
+
+.f-info{
+    text-align: center;
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+
+}
+
+
+.big{
+    background-color: rgb(132, 120, 240);
+    display: flex;
+    /*  gin-right: 15rem; */
+    flex-direction: row;
+    justify-content: space-around !important;
+    /* align-items: center; */
+}
+
+/* login signup page  */
+
+/* General Styles */
+body {
+    background-color: #f8f4f4; /* Light background to make red accents stand out */
+    font-family: Arial, sans-serif;
+}
+
+/* Container Styles */
+.row {
+    margin: 0 auto;
+    max-width: 800px; /* Center the form */
+}
+
+/* Header Styles */
+h1 {
+    color: #a52a2a; /* Reddish brown color */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+form {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Field Styles */
+input.form-control {
+    border: 1px solid #d4a3a3; /* Light red border */
+    border-radius: 4px;
+    padding: 10px;
+}
+
+input.form-control:focus {
+    border-color: #a52a2a; /* Darker red for focus */
+    box-shadow: 0 0 0 0.2rem rgba(165, 42, 42, 0.25); /* Red shadow on focus */
+}
+
+/* Button Styles */
+button.btn-success {
+    background-color: #a52a2a; /* Reddish brown background */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.btn-success:hover {
+    background-color: #8b2a2a; /* Darker red on hover */
+}
+
+/* Margin and Padding */
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.mt-3 {
+    margin-top: 1rem;
+}
+
+
+/* login signup page ends  */
+
+/* navbar css */
+
+/* Navbar Styles */
+.navbar {
+    background-color: #a52a2a; /* Reddish brown background */
+    border-bottom: 1px solid #8b2a2a; /* Darker red border */
+}
+
+/* Navbar Brand Styles */
+.navbar-brand {
+    color: #a52a2a; /* Static reddish brown color */
+    font-weight: bold;
+    font-size: 1.5rem; /* Slightly larger font size for prominence */
+}
+
+/* Navbar Links */
+.nav-link {
+    color: #000; /* Black color for links */
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #a52a2a; /* Reddish brown color on hover */
+}
+
+/* Navbar Toggler Icon */
+.navbar-toggler-icon {
+    background-color: #f8f4f4; /* Light color for the toggle icon */
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+    background-color: #fff; /* White background for dropdown */
+    border: 1px solid #d4a3a3; /* Light red border */
+    border-radius: 4px;
+}
+
+.dropdown-item {
+    color: #000; /* Black color for dropdown items */
+}
+
+.dropdown-item:hover {
+    background-color: #f8f4f4; /* Light background on hover */
+    color: #a52a2a; /* Reddish brown color on hover */
+}
+
+/* Button Styles */
+.btn-outline-success {
+    color: #a52a2a; /* Reddish brown border and text */
+    border-color: #a52a2a;
+}
+
+.btn-outline-success:hover {
+    background-color: #a52a2a; /* Reddish brown background on hover */
+    color: #fff; /* White text on hover */
+}
+
+/* Search Form Styles */
+.navbar .d-flex {
+    margin-top: 15px;
+}
+
+.navbar .form-control {
+    border: 1px solid #d4a3a3; /* Light red border */
+    border-radius: 4px;
+}
+
+.navbar .form-control::placeholder {
+    color: #a52a2a; /* Reddish brown placeholder text */
+}
+
+.navbar .form-control:focus {
+    border-color: #a52a2a; /* Darker red on focus */
+    box-shadow: 0 0 0 0.2rem rgba(165, 42, 42, 0.25); /* Red shadow on focus */
+}
+
+.navbar .btn-outline-success {
+    color: #a52a2a; /* Reddish brown border and text */
+    border-color: #a52a2a;
+}
+
+.navbar .btn-outline-success:hover {
+    background-color: #a52a2a; /* Reddish brown background on hover */
+    color: #fff; /* White text on hover */
+}
+
+/* Margin Adjustments */
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.mb-lg-0 {
+    margin-bottom: 0;
+}
+
+.mt-3 {
+    margin-top: 1rem;
+}
+
+/* navbar css ends  */
+
+/* fotter css starts  */
+.big {
+    display: flex;
+    justify-content: space-between; /* Aligns columns horizontally */
+    background-color: #a34228; /* Earthy red similar to the image */
+    padding: 40px 20px; /* Adjusts padding for spacing */
+    flex-wrap: nowrap; /* Prevents wrapping of columns */
+}
+
+/* Column styling */
+.big .col-sm-3 {
+    flex: 1;
+    margin: 0 20px; /* Space between columns */
+    color: #ffffff; /* White text for content */
+}
+
+.big h6 {
+    font-size: 1.2em;
+    color: #000000; /* Black color for headings */
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ff9999; /* Light border for emphasis */
+    padding-bottom: 5px;
+}
+
+.big ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.big ul li {
+    margin-bottom: 12px;
+}
+
+.big ul li a {
+    color: #ffffff; /* White links */
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.big ul li a:hover {
+    color: #ffdede; /* Light hover effect */
+    text-decoration: underline;
+}
+
+/* footer css ends */
+
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling specific to account page */
+.account-page {
+    padding: 20px; /* Add some padding */
+}
+
+/* Styling for Headers */
+.account-page h3 {
+    color: #a34228; /* Reddish color for the heading */
+    margin-bottom: 20px;
+}
+
+.account-page hr {
+    border-top: 1px solid #a34228; /* Reddish border for the horizontal rule */
+}
+
+/* Sidebar Styling */
+.account-page .list-group {
+    background-color: #f8f9fa; /* Light background for the sidebar */
+    border: 1px solid #ddd; /* Light border for the sidebar */
+}
+
+.account-page .list-group-item {
+    background-color: #fff; /* White background for list items */
+    color: #333; /* Dark text color for better readability */
+    border: 1px solid #ddd; /* Light border for list items */
+    border-radius: 4px; /* Slightly rounded corners */
+    margin-bottom: 5px; /* Space between items */
+}
+
+.account-page .list-group-item:hover {
+    background-color: #e2e6ea; /* Light grey background on hover */
+    border-color: #a34228; /* Reddish border on hover */
+    color: #a34228; /* Reddish text on hover */
+}
+
+.account-page .list-group-item.disabled {
+    background-color: #f5f5f5; /* Light grey for disabled items */
+    color: #aaa; /* Light grey text for disabled state */
+}
+
+/* Form Styling */
+.account-page .form-container {
+    background-color: #fff; /* White background for the form container */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners for the form */
+    border: 1px solid #ddd; /* Light border for the form container */
+}
+
+.account-page .form-control {
+    background-color: #fff; /* White background for input fields */
+    color: #000; /* Black text for input fields */
+    border: 1px solid #ddd; /* Light border for input fields */
+    border-radius: 4px; /* Rounded corners for input fields */
+}
+
+.account-page .form-control:focus {
+    border-color: #a34228; /* Reddish border color on focus */
+    box-shadow: 0 0 0 0.2rem rgba(163, 66, 40, 0.25); /* Subtle shadow for focus */
+}
+
+.account-page .btn-success {
+    background-color: #a34228; /* Reddish button background */
+    border-color: #a34228; /* Matching border color */
+    color: #fff; /* White text color */
+}
+
+.account-page .btn-success:hover {
+    background-color: #8e2b18; /* Darker reddish color on hover */
+    border-color: #6f2e1f; /* Slightly darker border on hover */
+}
+
+.account-page .form-label {
+    color: #333; /* Dark text for labels */
+}
+
+.account-page .form-text {
+    color: #666; /* Medium grey for helper text */
+}
+
+.account-page .row {
+    margin: 0;
+}
+
+.account-page .col-3, .account-page .col-2, .account-page .col-7 {
+    padding: 15px;
+}
+
+.pp{
+    border-radius: 100%;
+    height: 10rem;
+    width: 10rem;
+    align-items: center;
+}
+
+.pi{
+    height: 20rem;
+}
+
+/* homepage styles  */
+
+/* Scoped General Body Styling */
+.homepage {
+    background-color: #f8f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Header Styling */
+.homepage h3 {
+    color: #a52a2a; /* Reddish brown for headers */
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+.homepage .btn-info {
+    background-color: #a52a2a; /* Reddish-brown background */
+    color: white;
+    padding: 10px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.homepage .btn-info:hover {
+    background-color: #8b2a2a; /* Darker red on hover */
+}
+
+/* Carousel Styling */
+
+/* Carousel Styling - Ensure Images are Fully Contained */
+.homepage .carousel-inner img {
+    object-fit: contain;  /* Contain the image within the carousel */
+    height: 400px;        /* Keep the height consistent */
+    width: 100%;          /* Ensure full width of the carousel is utilized */
+    background-color: #fff; /* Optional: Adds a background for images with transparency */
+}
+
+
+.homepage .carousel-control-prev-icon,
+.homepage .carousel-control-next-icon {
+    background-color: #a52a2a; /* Reddish-brown icons */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.homepage .carousel-indicators button {
+    background-color: #a52a2a; /* Reddish-brown indicators */
+}
+
+/* Container for the carousel */
+.homepage .carousel-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .homepage h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .homepage .btn-info {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+
+    .homepage .carousel-inner img {
+        height: 300px;
+    }
+
+    .homepage .carousel-control-prev-icon,
+    .homepage .carousel-control-next-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .homepage h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .homepage .btn-info {
+        padding: 6px 15px;
+        font-size: 0.8rem;
+    }
+
+    .homepage .carousel-inner img {
+        height: 250px;
+    }
+
+    .homepage .carousel-control-prev-icon,
+    .homepage .carousel-control-next-icon {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* home page css ends  */
+
+
+/* assam page styling  */
+
+/* Scoped styling for the Assam page to avoid conflicts */
+.assam-page {
+    background-color: #f8f4f4; /* Light background consistent with the theme */
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Title Styling */
+.assam-page h3 {
+    color: #a52a2a; /* Reddish theme color */
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 2rem; /* Larger font size for emphasis */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.assam-page h3:hover {
+    color: #8b2a2a; /* Darker red on hover */
+}
+
+/* Card Container Styling */
+.assam-page .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Card Styling */
+.assam-page .card {
+    flex: 1 1 calc(50% - 20px); /* Responsive card width */
+    max-width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+    border-radius: 8px; /* Rounded corners for the card */
+    border: 1px solid #d4a3a3; /* Light red border */
+    background-color: #fff; /* White background */
+    overflow: hidden; /* Ensure content doesn't spill outside card */
+}
+
+.assam-page .card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Card Image Styling */
+.assam-page .card img {
+    width: 100%;
+    height: auto; /* Ensure images are not stretched */
+    object-fit: cover;
+    border-bottom: 1px solid #d4a3a3; /* Light red border for image */
+}
+
+/* Card Body Styling */
+.assam-page .card-body {
+    padding: 15px;
+}
+
+.assam-page .card-title {
+    color: #a52a2a; /* Reddish-brown color */
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: bold; /* Bold for emphasis */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.assam-page .card-title:hover {
+    color: #8b2a2a; /* Darker red on hover */
+}
+
+.assam-page .card-text {
+    color: #333; /* Dark text color for readability */
+    margin-bottom: 10px;
+    font-size: 1rem; /* Standard font size */
+}
+
+.assam-page .card-text small {
+    color: #666; /* Lighter color for secondary text */
+    font-size: 0.9rem; /* Slightly smaller font size */
+}
+
+
+/* Product Details Page Styling */
+
+/* Scoped styling for the Product Details page */
+.product-details-page {
+    background-color: #f8f4f4; /* Light background consistent with the theme */
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    color: #333; /* Default text color */
+    max-width: 800px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the content */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Title Styling */
+.product-details-page h3 {
+    color: #a52a2a; /* Reddish brown color */
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 2rem; /* Larger font size for prominence */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.product-details-page h3:hover {
+    color: #8b2a2a; /* Darker red on hover */
+}
+
+/* List Styling */
+.product-details-page ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.product-details-page ul li {
+    background-color: #fff; /* White background for list items */
+    border: 1px solid #d4a3a3; /* Light red border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    margin-bottom: 15px;
+    color: #333; /* Dark text color for readability */
+    font-size: 1.2rem; /* Larger font size for items */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transform and shadow transition */
+}
+
+.product-details-page ul li:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Price Styling */
+.product-details-page ul li:nth-child(2) {
+    font-weight: bold; /* Bold for price */
+    color: #a52a2a; /* Reddish-brown color for price */
+    font-size: 1.4rem; /* Slightly larger font size for price */
+}
+
+
+/* map styles  */
+
+/* Scoped styling for the map page */
+.map-page {
+    background-color: #fdf5e6; /* Light beige background for the entire page */
+    min-height: 100vh; /* Ensure the background covers the full height of the viewport */
+    padding: 20px; /* Add some padding around the content */
+}
+
+/* Styling for the row */
+.map-page .row {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align items to the top */
+    padding: 20px;
+    gap: 20px; /* Space between columns */
+}
+
+/* Scoped tooltip styling */
+.map-page .tooltip {
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    visibility: hidden;
+    pointer-events: none; /* Ensures the tooltip doesn't interfere with the mouse */
+    white-space: nowrap;
+    z-index: 10; /* Ensure tooltip appears above other elements */
+}
+
+/* Scoped styling for SVG map */
+.map-page svg {
+    width: 80%; /* Adjust width as needed */
+    max-width: 1000px; /* Ensure it doesn’t exceed a certain width */
+    height: auto; /* Maintain aspect ratio */
+    border: 1px solid #ddd; /* Light border around the map */
+    background-color: #fff; /* White background for the map */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* Scoped enhanced circles section styling */
+.map-page .col-4 {
+    max-width: 500px; /* Increase width to accommodate larger state boxes */
+    margin-top: 50px; /* Space from the top */
+    padding-left: 20px; /* Padding on the left */
+    text-align: left;
+}
+
+/* Heading styling */
+.map-page .col-4 h6 {
+    color: #a52a2a; /* Color theme */
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+/* Grid layout for state names */
+.map-page .state-names {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 4 items per row */
+    gap: 15px; /* Space between boxes */
+    margin-top: 20px; /* Space from the top */
+    width: 100%; /* Ensure full width usage */
+    max-width: 100%; /* Adjust to fit within the column width */
+    justify-content: center; /* Center grid items horizontally within the container */
+}
+
+/* Ensure the state boxes have the same height */
+.map-page .state-box {
+    background-color: #a52a2a; /* Match theme color */
+    border: 1px solid #8b0000; /* Darker shade for border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px; /* Increase space inside the box */
+    font-size: 1rem;
+    color: #fff; /* White text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    text-align: center; /* Center text inside each box */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Make sure the box takes full width of the grid column */
+    max-width: 250px; /* Limit the maximum width of each box */
+    min-width: 200px; /* Set a minimum width for each box */
+    height: 70px; /* Set a fixed height for all boxes */
+}
+
+/* Ensure uniform height with flex */
+.map-page .state-box > * {
+    flex: 1;
+}
+
+/* Hover effect for state boxes */
+.map-page .state-box:hover {
+    background-color: #8b0000; /* Darker shade on hover */
+    color: #fff; /* Maintain white text color on hover */
+}
+
+/* Page background styling */
+.map-page body {
+    background-color: #fdf5e6; /* Light beige background for a softer look */
+    font-family: Arial, sans-serif;
+    color: #333; /* General text color */
+}
+
+/* styles done for map  */
+
+/* community home page styles  */
+
+/* Scoped styling for the blog page */
+.blog-page {
+    background-color: #f9f9f9; /* Light gray background for a clean look */
+    min-height: 100vh; /* Ensure the background covers the full height of the viewport */
+    padding: 20px; /* Add some padding around the content */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+}
+
+/* Styling for the row */
+.blog-page .row {
+    display: flex;
+    gap: 20px; /* Space between columns */
+    flex-wrap: wrap; /* Wrap columns on smaller screens */
+}
+
+/* Side menu styling */
+.blog-page .col-3 {
+    padding: 10px; /* Add padding */
+    max-width: 300px; /* Restrict max width */
+}
+
+.blog-page .list-group {
+    background-color: #fff; /* White background for the list */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Deep shadow for depth */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.blog-page .list-group:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Styling for the list-group items (buttons) */
+.blog-page .list-group-item {
+    border: 1px solid #a52a2a; /* Theme color for border */
+    background-color: #fff; /* White background for a clean look */
+    color: #a52a2a; /* Theme color for text */
+    font-weight: bold; /* Bold text for emphasis */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover effect for list-group items */
+.blog-page .list-group-item:hover {
+    background-color: #a52a2a; /* Darker background on hover */
+    color: #fff; /* White text color on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Light shadow for depth */
+}
+
+/* Active state styling for list-group items */
+.blog-page .list-group-item.active {
+    background-color: #a52a2a; /* Theme color for active state */
+    color: #fff; /* White text color */
+    border-color: #a52a2a; /* Match border with the theme color */
+}
+
+/* Focus state for accessibility */
+.blog-page .list-group-item:focus {
+    box-shadow: 0 0 0 3px rgba(165, 42, 42, 0.5); /* Focus outline with theme color */
+}
+
+/* Main content area styling */
+.blog-page .col-6 {
+    flex: 2; /* Take more space */
+}
+
+.blog-page .card {
+    margin-bottom: 20px; /* Space between cards */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Deep shadow for depth */
+    background-color: #fff; /* White background for the card */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.blog-page .card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.blog-page .card-body {
+    padding: 20px; /* Padding inside the card body */
+}
+
+.blog-page .card-title {
+    font-size: 1.5rem; /* Larger font size for titles */
+    color: #333; /* Dark text color */
+    margin-bottom: 10px; /* Space below title */
+    transition: color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.blog-page .card-title:hover {
+    color: #a52a2a; /* Highlight title color on hover */
+}
+
+.blog-page .card-text {
+    font-size: 1rem; /* Text font size */
+    color: #555; /* Slightly lighter text color */
+}
+
+/* Sidebar styling */
+.blog-page .col-3 {
+    padding: 10px; /* Add padding */
+    max-width: 300px; /* Restrict max width */
+}
+
+.blog-page .card {
+    margin-bottom: 20px; /* Space between cards */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Deep shadow for depth */
+    background-color: #fff; /* White background for the card */
+}
+
+.blog-page .form-control {
+    border-radius: 12px; /* Rounded corners for the search input */
+    border: 1px solid #ddd; /* Light border */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.blog-page .form-control:focus {
+    border-color: #a52a2a; /* Highlight border color on focus */
+}
+
+.blog-page .btn-outline-success {
+    border-radius: 12px; /* Rounded corners for the button */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for button */
+}
+
+.blog-page .btn-outline-success:hover {
+    background-color: #a52a2a; /* Highlight background color on hover */
+    color: #fff; /* White text color on hover */
+}
+
+/* Information section styling */
+.blog-page .card-body > div {
+    margin-bottom: 15px; /* Space between items */
+    font-size: 1rem; /* Font size for information items */
+    color: #333; /* Dark text color */
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+.blog-page .card-body i {
+    color: #28a745; /* Green color for icons */
+    margin-right: 10px; /* Space between icon and text */
+    transition: color 0.3s ease; /* Smooth transition for icon color */
+}
+
+.blog-page .card-body i:hover {
+    color: #007bff; /* Highlight icon color on hover */
+}
+
+/* Image effects */
+.card-img-bottom {
+    border-radius: 10px; /* Rounded corners */
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition */
+    transform-style: preserve-3d; /* Preserve 3D transformations */
+}
+
+.card-img-bottom img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+    transform-style: preserve-3d; /* Preserve 3D transformations */
+}
+
+/* Tilt effect on hover */
+.card-img-bottom:hover {
+    transform: perspective(1000px) rotateX(20deg) rotateY(20deg) rotateZ(10deg); /* Increased tilt effect from all sides */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+}
+
+.card-img-bottom:hover img {
+    transform: scale(1.1); /* Slight zoom for the image */
+}
+
+/* css for community forum done  */
+
+/* collection page styling  */
+
+/* Scoped styling for the collections page */
+.collections-page {
+    background-color: #f4f4f4; /* Light gray background for a clean look */
+    min-height: 100vh; /* Ensure the background covers the full height of the viewport */
+    padding: 20px; /* Add some padding around the content */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+}
+
+/* Centering content and adding space */
+.collections-page .row {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    gap: 20px; /* Space between columns */
+    flex-wrap: wrap; /* Wrap columns on smaller screens */
+    margin-bottom: 30px; /* Space below the row */
+}
+
+/* Profile image styling */
+.collections-page .pp {
+    width: 100%; /* Full width */
+    max-width: 300px; /* Restrict max width */
+    border-radius: 50%; /* Circular image */
+    border: 5px solid #a52a2a; /* Theme color border */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.collections-page .pp:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Heading styling */
+.collections-page h5 {
+    text-align: center; /* Center the heading */
+    color: #a52a2a; /* Theme color */
+    font-size: 2rem; /* Larger font size */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Grid layout for collection images */
+.collections-page .pi {
+    width: 100%; /* Full width */
+    max-width: 300px; /* Restrict max width */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transitions */
+    position: relative;
+}
+
+/* Rotation effect on hover */
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.collections-page .pi:hover {
+    transform: scale(1.05) rotate(0deg); /* Slight zoom effect on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    animation: rotate 3s ease-out forwards; /* Slow rotation effect, rotating only once */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .collections-page .row {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items */
+    }
+
+    .collections-page .pi {
+        max-width: 90%; /* Reduce max width for smaller screens */
+    }
+}
+
+/* collection page css ends here  */
+
+/* bidding page css  */
+
+
+/* Scoped styling for the bidding page */
+.bidding-page {
+    background-color: #f9f9f9; /* Light gray background for a clean look */
+    min-height: 100vh; /* Ensure the background covers the full height of the viewport */
+    padding: 20px; /* Add some padding around the content */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+}
+
+/* Center buttons with theme color */
+.bidding-page .btn-info {
+    background-color: #a52a2a; /* Theme color */
+    border: none; /* Remove border */
+    color: #fff; /* White text */
+    font-size: 1rem; /* Font size */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    padding: 10px 20px; /* Padding inside button */
+}
+
+.bidding-page .btn-info:hover {
+    background-color: #8b4513; /* Darker shade of theme color */
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+/* Style for the search form */
+.bidding-page .form-control {
+    border-radius: 12px; /* Rounded corners for the search input */
+    border: 1px solid #ddd; /* Light border */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.bidding-page .form-control:focus {
+    border-color: #a52a2a; /* Highlight border color on focus */
+}
+
+.bidding-page .btn-outline-success {
+    border-radius: 12px; /* Rounded corners for the button */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for button */
+}
+
+.bidding-page .btn-outline-success:hover {
+    background-color: #a52a2a; /* Theme color */
+    color: #fff; /* White text color on hover */
+}
+
+/* Styling for the card */
+.bidding-page .card {
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Deep shadow for depth */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+    margin-bottom: 20px; /* Space between cards */
+    display: flex; /* Flexbox for alignment */
+    flex-direction: column; /* Stack content vertically */
+    height: 100%; /* Full height to ensure equal height */
+    overflow: hidden; /* Ensure no overflow of contents */
+    width: 100%; /* Full width of column */
+    max-width: 100%; /* Ensure card width fits within column */
+}
+
+.bidding-page .card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.bidding-page .card-body {
+    padding: 20px; /* Padding inside the card body */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center align content */
+    height: 100%; /* Full height for content alignment */
+}
+
+.bidding-page .card img {
+    width: 100%; /* Full width of the column */
+    height: 200px; /* Fixed height to ensure consistent card sizes */
+    object-fit: cover; /* Cover the container without stretching */
+    border-bottom: 1px solid #ddd; /* Add a border below the image */
+    margin-top: 10px; /* Space above image */
+}
+
+/* Ensure equal height for columns */
+.bidding-page .col-4 {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: stretch; /* Stretch items to equal height */
+    padding: 10px; /* Add padding */
+    flex: 1; /* Allow columns to grow and fill available space */
+}
+
+/* Center the form in its column */
+.bidding-page .container-fluid {
+    display: flex;
+    justify-content: center; /* Center form horizontally */
+}
+
+/* Adjust spacing and alignment */
+.bidding-page .row {
+    margin-bottom: 20px; /* Space between rows */
+}
+
+/* login page css  */
+/* Full viewport height, center content */
+.login-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #fdf5e6; /* Light cream background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+    color: #333; /* Darker text color for better readability */
+}
+
+/* Style for the form container */
+.form-container {
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Deep shadow for depth */
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Form heading */
+.login-page h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #a52a2a; /* Matching theme color */
+}
+
+/* Label styling */
+.form-label {
+    color: #a52a2a; /* Matching theme color */
+    font-weight: bold; /* Make labels stand out */
+    margin-bottom: 5px; /* Space below label */
+    display: block; /* Ensure labels are block-level for alignment */
+    text-align: left; /* Align text to the left */
+}
+
+/* Input fields styling */
+.form-control {
+    border-radius: 25px;
+    border: 2px solid #a52a2a; /* Matching theme color */
+    padding: 12px 20px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus effect for inputs */
+.form-control:focus {
+    border-color: #e1b16a; /* Lighter color for focus */
+    box-shadow: 0 0 8px rgba(225, 177, 106, 0.5); /* Glow effect */
+    outline: none;
+}
+
+/* Button styling */
+.btn-success {
+    background: #a52a2a;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button hover effect */
+.btn-success:hover {
+    background: #e1b16a; /* Lighter background on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Button active effect */
+.btn-success:active {
+    background: #a52a2a; /* Darker background on click */
+    transform: scale(0.95); /* Slight shrink effect */
+}
+
+/* css for signup page  */
+
+/* Full viewport height, center content */
+.signup-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #fdf5e6; /* Light cream background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+    color: #333; /* Darker text color for better readability */
+}
+
+/* Style for the form container */
+.form-container {
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Deep shadow for depth */
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Form heading */
+.signup-page h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #a52a2a; /* Matching theme color */
+}
+
+/* Input fields styling */
+.form-control {
+    border-radius: 25px;
+    border: 2px solid #a52a2a; /* Matching theme color */
+    padding: 12px 20px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus effect for inputs */
+.form-control:focus {
+    border-color: #e1b16a; /* Lighter color for focus */
+    box-shadow: 0 0 8px rgba(225, 177, 106, 0.5); /* Glow effect */
+    outline: none;
+}
+
+/* Button styling */
+.btn-success {
+    background: #a52a2a;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button hover effect */
+.btn-success:hover {
+    background: #e1b16a; /* Lighter background on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Button active effect */
+.btn-success:active {
+    background: #a52a2a; /* Darker background on click */
+    transform: scale(0.95); /* Slight shrink effect */
+}
+
+/* Label styling */
+.form-label {
+    color: #a52a2a; /* Matching theme color */
+    font-weight: bold; /* Make labels stand out */
+    margin-bottom: 5px; /* Space below label */
+    display: block; /* Ensure labels are block-level for alignment */
+    text-align: left; /* Align text to the left */
+}
+
+/* Valid feedback styling */
+.valid-feedback {
+    color: #28a745; /* Green color for valid feedback */
+}
