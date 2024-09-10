@@ -32,7 +32,7 @@ const sessionOptions = {
     secret: "mysupersecret",
     resave: false,
     saveUninitialized: true,
-    cookies: {
+    cookie: {
         expires: Date.now() + 7*24*60*60*1000,
         maxAge: 7*24*60*60*1000,
         httpOnly: true,
@@ -49,6 +49,12 @@ passport.use(new localStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+app.use((req, res, next) => {
+    res.locals.success = req.flash("success");
+    res.locals.error = req.flash("error");
+    res.locals.currUser = req.user;
+    next();
+})
 
 app.get("/", (req, res) => {
     res.render("products/home.ejs");
@@ -81,14 +87,27 @@ app.get("/signup",(req, res) => {
     res.render("users/signup.ejs");
 })
 
-app.post("/signup", async (req, res) => {
-    let {username, email, password} = req.body;
-    const newUser = new User({email, username});
-    const registeredUser = await User.register(newUser, password);
-    req.flash("success", "Welcome to ePost Office !")
-    res.redirect("/");
+app.post("/signup", async (req, res, next) => {
+    try {
+        let { username, email, password } = req.body;
+        const newUser = new User({ email, username });
+        const registeredUser = await User.register(newUser, password);
+        console.log(registeredUser);
 
-})
+        req.login(registeredUser, (err) => {
+            if (err) {
+                return next(err); // Properly handle login errors
+            }
+            req.flash("success", "Welcome to WanderLust");
+            res.redirect("/");
+        });
+    } catch (e) {
+        console.log(e.message);
+        req.flash("error", e.message);
+        res.redirect("/signup");
+    }
+});
+
 
 
 //login
