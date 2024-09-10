@@ -56,6 +56,7 @@ app.use((req, res, next) => {
     next();
 })
 
+
 app.get("/", (req, res) => {
     res.render("products/home.ejs");
 })
@@ -108,6 +109,15 @@ app.post("/signup", async (req, res, next) => {
     }
 });
 
+app.post("/signup", async (req, res) => {
+    let {username, email, password} = req.body;
+    const newUser = new User({email, username});
+    const registeredUser = await User.register(newUser, password);
+    req.flash("success", "Welcome to ePost Office !")
+    res.redirect("/");
+
+})
+
 
 
 //login
@@ -158,4 +168,7 @@ app.get("/map", (req,res) => {
 
 app.listen(8080, () =>{
     console.log("server listening");
+
 })
+
+

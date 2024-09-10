@@ -1,5 +1,6 @@
-<% layout("layouts/boilerplate")%>
+<% layout("layouts/boilerplate") %>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<div class="blog-page">
 <body><br><br>
     <div class="row">
         <div class="col-3">
@@ -52,3 +53,27 @@
         </div>
     </div>
 </body>
+</div>
+
+<script>
+document.querySelectorAll('.card img').forEach(element => {
+  element.addEventListener('mousemove', (e) => {
+    const rect = element.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const deltaX = (x - centerX) / centerX;
+    const deltaY = (y - centerY) / centerY;
+    const tiltX = deltaY * 10; // Adjust the tilt amount
+    const tiltY = -deltaX * 10; // Adjust the tilt amount
+
+    element.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+  });
+
+  element.addEventListener('mouseleave', () => {
+    element.style.transform = 'rotateX(0deg) rotateY(0deg)'; // Reset on mouse leave
+  });
+});
+</script>
+
