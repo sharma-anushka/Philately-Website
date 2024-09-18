@@ -41,4 +41,216 @@
             </button>
         </div>
     </div>
+
+    <!-- Chatbot Integration -->
+    <button class="chatbot-button" onclick="toggleChatbot()"> </button>
+
+    <div class="chatbot-window">
+        <div class="chatbot-header">PostPal</div>
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="bot-message">Hello! What's your name?</div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbotInput" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        let userName = '';
+        let stage = 'getName'; // Tracks the conversation stage
+
+        function toggleChatbot() {
+            const chatbotWindow = document.querySelector('.chatbot-window');
+            chatbotWindow.style.display = chatbotWindow.style.display === 'none' || chatbotWindow.style.display === '' ? 'block' : 'none';
+        }
+        function sendMessage() {
+          const inputField = document.getElementById('chatbotInput');
+          const message = inputField.value;
+          if (message.trim() === '') return;
+      
+          // Display the user's message
+          displayMessage('You', message, 'user-message');
+      
+          // Clear input field
+          inputField.value = '';
+      
+          // Handle stages
+          if (stage === 'getName') {
+              userName = message; // Save the user's name
+              displayMessage('Bot', `Hello, ${userName}! How can I assist you today?`, 'bot-message');
+              stage = 'chat'; // Directly move to the chat stage
+          } else if (stage === 'chat') {
+              fetchChatbotResponse(message); // Handle custom queries
+          }
+      }
+      
+      // Display a message in the chatbot window
+      function displayMessage(sender, text, messageType) {
+          const messagesContainer = document.getElementById('chatbotMessages');
+          const messageElement = document.createElement('div');
+          
+          // Use innerHTML for bot messages to allow HTML rendering
+          if (messageType === 'bot-message') {
+              messageElement.innerHTML = `${text}`;
+          } else {
+              messageElement.textContent = `${text}`;
+          }
+          
+          messageElement.classList.add(messageType);
+          messagesContainer.appendChild(messageElement);
+          messagesContainer.scrollTop = messagesContainer.scrollHeight;
+      }
+      
+      // Fetch chatbot response
+      function fetchChatbotResponse(message) {
+          setTimeout(() => {
+              let response = '';
+      
+              if (message.includes('price')) {
+                  response = 'The 1947 Independence Stamp is priced at ₹500.';
+              } else if (message.includes('catalogue')) {
+                  response = 'You can view all stamps listing under our "Catalogue" section <a href="/products/assam" target="_blank">here</a>.';
+              } else if (message.includes('blog')) {
+                  response = 'You can view blogs and posts in our "Community" section <a href="/community/main" target="_blank">here</a>.';
+              } else if (message.includes('bidding')) {
+                  response = 'You can access our "Bidding" section <a href="/features/bidding" target="_blank">here</a>.';
+              } else if (message.includes('deposit')) {
+                  response = 'You can view your National Philatelic Deposit Account in our "NPDA" section <a href="/account/philatelicDeposit" target="_blank">here</a>.';
+              } else if (message.includes('contact')) {
+                  response = 'You can contact us at: Toll-Free Enquiry Helpline: 18002666868 from 9:00 AM - 6:00 PM (Except Sundays & Gazetted Holidays). IVRS facility is available 24*7*365.';
+              } else {
+                  response = 'I\'m not sure about that, you can try asking something else!';
+              }
+      
+              displayMessage('Bot', response, 'bot-message');
+          }, 1000);
+      }
+      
+    </script>
+
+    <style>
+        .chatbot-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #fbf974;
+            color: white;
+            border: 100;
+            border-radius: 100%;
+            border-color:#fbf974;
+            padding: 28px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1000;
+            background-image: url('https://cdn-icons-png.flaticon.com/256/1154/1154968.png');
+            background-size: cover;  
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .chatbot-button:hover {
+            background-color: #f90505;
+        }
+
+        .chatbot-window {
+            display: none;
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 350px;
+            height: 500px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            border: 5px solid #ffffff;
+            border-image: url('https://i.pinimg.com/originals/47/c8/e7/47c8e711cec0601b99b94805a27ce919.gif') 30 round;
+        }
+
+        .chatbot-header {
+            background-image: url('https://img.freepik.com/free-photo/abstract-luxury-soft-red-background-christmas-valentines-layout-design-studio-room-web-template-business-report-with-smooth-circle-gradient-color_1258-54519.jpg');
+            background-size: cover;
+            background-position: center;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 15px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 50px;
+            font-weight: 1000;
+            border-radius: 10px 10px 0 0;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chatbot-messages {
+            padding: 10px;
+            height: 330px;
+            overflow-y: auto;
+            background-color: #f9f9f9;
+            border-bottom: 1px solid #ff0000;
+        }
+
+        .chatbot-input {
+            padding: 5px;
+            display: flex;
+            background-color: #ffffff;
+            border-top: 1px solid #fd0000;
+        }
+
+        .chatbot-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #060606;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .chatbot-input button {
+            background-color: #f5811c;
+            color: white;
+            border: none;
+            padding: 10px 12px;
+            margin-left: 8px;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .chatbot-input button:hover {
+            background-color: #f00a0a;
+        }
+
+        .chatbot-messages div {
+            margin-bottom: 10px;
+            padding: 8px 12px;
+            border-radius: 15px;
+            max-width: 70%;
+            clear: both;
+        }
+
+        .chatbot-messages .user-message {
+            background-color: #bd0e0e;
+            color: white;
+            float: right;
+        }
+
+        .chatbot-messages .bot-message {
+            background-color: #d3d2cb;
+            color: #333;
+            float: left;
+        }
+
+        .chatbot-messages .bot-message {
+            background-image: url('https://i.ibb.co/NWXYVKJ/image.png');
+            background-size: cover;
+        }
+    </style>
 </body>
+
