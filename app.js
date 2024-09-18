@@ -99,7 +99,7 @@ app.post("/signup", async (req, res, next) => {
             if (err) {
                 return next(err); // Properly handle login errors
             }
-            req.flash("success", "Welcome to WanderLust");
+            req.flash("success", "Welcome to ePostOffice");
             res.redirect("/");
         });
     } catch (e) {
