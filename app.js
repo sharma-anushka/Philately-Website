@@ -12,6 +12,7 @@ const flash = require("connect-flash");
 const { savedRedirectUrl } = require("./middleware");
 const Bidding = require("./models/bidding");
 const Blog = require("./models/blogs");
+const Event = require("./models/events");
 
 async function main() {
   await mongoose.connect('mongodb://127.0.0.1:27017/assam');
@@ -99,7 +100,7 @@ app.post("/signup", async (req, res, next) => {
             if (err) {
                 return next(err); // Properly handle login errors
             }
-            req.flash("success", "Welcome to WanderLust");
+            req.flash("success", "Welcome to ePost Office");
             res.redirect("/");
         });
     } catch (e) {
@@ -151,8 +152,9 @@ app.get("/features/bidding", async (req,res) => {
     res.render("features/bidding.ejs", {bidding});
 })
 
-app.get("/features/events", (req,res) => {
-    res.render("features/events.ejs");
+app.get("/features/events", async (req,res) => {
+    const event = await Event.find();
+    res.render("features/events.ejs", {event});
 })
 
 app.get("/features/quiz", (req,res) => {

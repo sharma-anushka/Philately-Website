@@ -1,0 +1,68 @@
+<!-- Chatbot button -->
+<button class="chatbot-button" onclick="toggleChatbot()"> </button>
+
+<!-- Chatbot window -->
+<div class="chatbot-window">
+    <div class="chatbot-header">PostPal</div>
+    
+    <div class="chatbot-messages" id="chatbotMessages">
+        <!-- Bot asks for name on first load -->
+        <div class="bot-message">Hello! What's your name?</div>
+    </div>
+    <div class="chatbot-input">
+        <input type="text" id="chatbotInput" placeholder="Type a message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<script>
+    let userName = '';
+    let stage = 'getName'; // Tracks the conversation stage
+
+    // Toggle chatbot window
+    function toggleChatbot() {
+        const chatbotWindow = document.querySelector('.chatbot-window');
+        chatbotWindow.style.display = chatbotWindow.style.display === 'none' || chatbotWindow.style.display === '' ? 'block' : 'none';
+    }
+
+    // Send a message to the chatbot
+    function sendMessage() {
+        const inputField = document.getElementById('chatbotInput');
+        const message = inputField.value;
+        if (message.trim() === '') return;
+
+        // Display the user's message
+        displayMessage('You', message, 'user-message');
+
+        // Clear input field
+        inputField.value = '';
+
+        // Handle stages
+        if (stage === 'getName') {
+            userName = message; // Save the user's name
+            displayMessage('Bot', `Hello, ${userName}! How can I assist you today?`, 'bot-message');
+            stage = 'chat'; // Directly move to the chat stage
+        } else if (stage === 'chat') {
+            fetchChatbotResponse(message); // Handle custom queries
+        }
+    }
+
+    // Display a message in the chatbot window
+    function displayMessage(sender, text, messageType) {
+        const messagesContainer = document.getElementById('chatbotMessages');
+        const messageElement = document.createElement('div');
+        messageElement.textContent = `${text}`;
+        messageElement.classList.add(messageType);
+        messagesContainer.appendChild(messageElement);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+
+    // Simulated chatbot response for user queries
+    function fetchChatbotResponse(message) {
+        setTimeout(() => {
+            let response = `Sorry, I'm not sure about that, but I can help you navigate our website!`;
+            displayMessage('Bot', response, 'bot-message');
+        }, 1000);
+    }
+
+</script>
