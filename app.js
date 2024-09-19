@@ -81,9 +81,18 @@ app.get("/community/main", async (req,res) => {
     res.render("community/main.ejs",{blogs});
 })
 
-app.get("/community/profile", (req,res) => {
-    res.render("community/profile.ejs");
-})
+const Profile = require("./models/profile");
+
+app.get("/community/profile", async (req, res) => {
+    try {
+        const profile = await Profile.findOne();  // Fetch the profile data
+        res.render("community/profile", { profile });
+    } catch (e) {
+        console.log(e);
+        req.flash("error", "Could not load profile data");
+        res.redirect("/");
+    }
+});
 //signup
 app.get("/signup",(req, res) => {
     res.render("users/signup.ejs");
