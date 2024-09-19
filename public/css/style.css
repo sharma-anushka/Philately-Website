@@ -1412,3 +1412,27 @@ body {
 .valid-feedback {
     color: #28a745; /* Green color for valid feedback */
 }
+
+.profile-page .rounded-circle {
+    border: 2px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.profile-page .row img {
+    margin: 10px 0;
+}
+
+.profile-page .card {
+    margin-bottom: 20px;
+}
+
+.profile-page .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+/* Apply the Merriweather font to collection and blog titles */
+.collection-title, .blog-title, .profile-name, .section-title{
+    font-family: 'Arial', serif;
+    font-weight: 700;
+    color: #9D2B22; /* Match the color from the image */
+}
