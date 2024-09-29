@@ -130,6 +130,7 @@
 .assam{
     border: solid black;
 }
+
 .f-info-links a{
     text-decoration: none;
     color: #222222;
@@ -200,41 +201,60 @@ h1 {
 }
 
 /* Form Styles */
-form {
-    background: #fff;
-    border: 1px solid #e5e5e5;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Container for input and button */
+/* Container for input and button */
+.search-container {
+    display: flex !important; /* Flexbox for horizontal alignment */
+    align-items: center !important; /* Vertically center the input and button */
+    justify-content: center !important; /* Center both elements horizontally */
+    gap: 10px !important; /* Space between input and button */
+    margin: 0 auto !important; /* Horizontally center the container */
+    padding: 10px 0 !important;
+    width: 100% !important; /* Ensure full width for layout control */
+    max-width: 300px !important; /* Set a max width for the search area */
 }
 
 /* Input Field Styles */
-input.form-control {
-    border: 1px solid #d4a3a3; /* Light red border */
-    border-radius: 4px;
-    padding: 10px;
+input.search-input {
+    border: 1px solid #ddd !important; /* Light border */
+    border-radius: 12px !important; /* Rounded corners */
+    padding: 10px 20px !important;
+    height: 40px !important; /* Fixed height */
+    flex-grow: 1 !important; /* Input takes available space */
+    max-width: 200px !important; /* Set max width for input */
+    transition: border-color 0.3s ease !important; /* Smooth transition for border color */
 }
 
-input.form-control:focus {
-    border-color: #a52a2a; /* Darker red for focus */
-    box-shadow: 0 0 0 0.2rem rgba(165, 42, 42, 0.25); /* Red shadow on focus */
+input.search-input:success {
+    border-color: #a52a2a !important; /* Highlight border color on focus */
 }
+
 
 /* Button Styles */
-button.btn-success {
-    background-color: #a52a2a; /* Reddish brown background */
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+button.search-button {
+    border-radius: 12px !important; /* Rounded corners for the button */
+    border: 1px solid #ddd !important; /* Light border */
+    background-color: transparent !important; /* Transparent background */
+    color: #a52a2a !important; /* Default text color */
+    padding: auto !important;
+    font-size: 16px !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s ease, color 0.3s ease !important; /* Smooth transition for button */
+    height: 40px !important; /* Match height with input */
+    width: 80px;
 }
 
-button.btn-success:hover {
-    background-color: #8b2a2a; /* Darker red on hover */
+/* Button Hover Styles */
+button.search-button:hover {
+    background-color: #a52a2a !important; /* Highlight background color on hover */
+    color: #fff !important; /* White text color on hover */
 }
+
+button.search-button:focus {
+    outline: none !important; /* Remove the focus outline */
+}
+
+
 
 /* Margin and Padding */
 .mb-3 {
@@ -308,6 +328,9 @@ button.btn-success:hover {
 /* Search Form Styles */
 .navbar .d-flex {
     margin-top: 15px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
 }
 
 .navbar .form-control {
@@ -620,27 +643,26 @@ body {
 /* assam page styling  */
 
 /* Scoped styling for the Assam page to avoid conflicts */
+x/* Base styles */
 .assam-page {
     background-color: #f8f4f4; /* Light background consistent with the theme */
     padding: 20px;
     font-family: Arial, sans-serif;
 }
 
-/* Title Styling */
 .assam-page h3 {
     color: #a52a2a; /* Reddish theme color */
     text-align: center;
     margin-bottom: 30px;
     font-weight: bold;
-    font-size: 2rem; /* Larger font size for emphasis */
-    transition: color 0.3s ease; /* Smooth color transition */
+    font-size: 2rem;
+    transition: color 0.3s ease;
 }
 
 .assam-page h3:hover {
     color: #8b2a2a; /* Darker red on hover */
 }
 
-/* Card Container Styling */
 .assam-page .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -648,58 +670,132 @@ body {
     justify-content: center;
 }
 
-/* Card Styling */
+/* Card Styles */
 .assam-page .card {
-    flex: 1 1 calc(50% - 20px); /* Responsive card width */
+    position: relative; /* Needed for hover overlay */
+    flex: 1 1 calc(50% - 20px);
     max-width: 100%;
     box-sizing: border-box;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
-    border-radius: 8px; /* Rounded corners for the card */
-    border: 1px solid #d4a3a3; /* Light red border */
-    background-color: #fff; /* White background */
-    overflow: hidden; /* Ensure content doesn't spill outside card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    border: 1px solid #d4a3a3;
+    background-color: #fff;
+    overflow: hidden;
 }
 
 .assam-page .card:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Card Image Styling */
 .assam-page .card img {
     width: 100%;
-    height: auto; /* Ensure images are not stretched */
+    height: auto;
     object-fit: cover;
-    border-bottom: 1px solid #d4a3a3; /* Light red border for image */
+    border-bottom: 1px solid #d4a3a3;
 }
 
-/* Card Body Styling */
 .assam-page .card-body {
     padding: 15px;
 }
 
 .assam-page .card-title {
-    color: #a52a2a; /* Reddish-brown color */
+    color: #a52a2a;
     font-size: 1.2rem;
     margin-bottom: 10px;
-    font-weight: bold; /* Bold for emphasis */
-    transition: color 0.3s ease; /* Smooth color transition */
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .assam-page .card-title:hover {
-    color: #8b2a2a; /* Darker red on hover */
+    color: #8b2a2a;
 }
 
 .assam-page .card-text {
-    color: #333; /* Dark text color for readability */
+    color: #333;
     margin-bottom: 10px;
-    font-size: 1rem; /* Standard font size */
+    font-size: 1rem;
 }
 
 .assam-page .card-text small {
-    color: #666; /* Lighter color for secondary text */
-    font-size: 0.9rem; /* Slightly smaller font size */
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Hover overlay styling */
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Slight dark overlay */
+    opacity: 0; /* Initially hidden */
+    display: flex;
+    justify-content: flex-end; /* Align to the right */
+    align-items: flex-end; /* Align bottom for 'Add to Basket' */
+    transition: opacity 0.3s ease;
+    flex-direction: column;
+}
+
+.assam-page .card:hover .hover-overlay {
+    opacity: 1; /* Show on hover */
+}
+
+/* Magnifier icon in top-right corner */
+.magnifier {
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.magnifier:hover {
+    transform: scale(1.2); /* Slight scale on hover */
+}
+
+/* Add to cart banner */
+/* Add to cart banner */
+.add-to-cart {
+    background-color: rgba(165, 42, 42, 0.7); /* Reddish-brown with reduced opacity */
+    color: white;
+    padding: 15px;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Full width of card */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart .text {
+    display: inline-block;
+}
+
+.add-to-cart .cart-icon {
+    display: none;
+    margin-left: 10px;
+}
+
+/* Hover effect for button to show cart icon */
+.add-to-cart:hover .text {
+    display: none;
+}
+
+.add-to-cart:hover .cart-icon {
+    display: inline-block;
+    font-size: 1.4rem;
+}
+
+.add-to-cart:hover {
+    background-color: rgba(139, 42, 42, 0.7); /* Darker red with reduced opacity */
 }
 
 
@@ -882,19 +978,23 @@ body {
     min-height: 100vh; /* Ensure the background covers the full height of the viewport */
     padding: 20px; /* Add some padding around the content */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+    width: 100% !important;
+    display: flex;
+
 }
 
 /* Styling for the row */
 .blog-page .row {
     display: flex;
-    gap: 20px; /* Space between columns */
+    gap: 10px; /* Space between columns */
     flex-wrap: wrap; /* Wrap columns on smaller screens */
+    width: 100%;
 }
 
 /* Side menu styling */
 .blog-page .col-3 {
     padding: 10px; /* Add padding */
-    max-width: 300px; /* Restrict max width */
+    /* max-width: 300px; Restrict max width */
 }
 
 .blog-page .list-group {
@@ -942,7 +1042,8 @@ body {
 
 /* Main content area styling */
 .blog-page .col-6 {
-    flex: 2; /* Take more space */
+    flex: 2;
+    min-width:  400px; /* Take more space */
 }
 
 .blog-page .card {
@@ -980,7 +1081,7 @@ body {
 }
 
 /* Sidebar styling */
-.blog-page .col-3 {
+.blog-page .col-4 {
     padding: 10px; /* Add padding */
     max-width: 300px; /* Restrict max width */
 }
@@ -992,26 +1093,75 @@ body {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Deep shadow for depth */
     background-color: #fff; /* White background for the card */
 }
-
-.blog-page .form-control {
-    border-radius: 12px; /* Rounded corners for the search input */
-    border: 1px solid #ddd; /* Light border */
-    transition: border-color 0.3s ease; /* Smooth transition for border color */
+.search-container-blogpage {
+    display: flex !important; /* Flexbox for horizontal alignment */
+    align-items: center !important; /* Vertically center the input and button */
+    justify-content: center !important; /* Center both elements horizontally */
+    gap: 10px !important; /* Space between input and button */
+    margin: 0 auto !important; /* Horizontally center the container */
+    padding: 10px 0 !important; /* Ensure full width for layout control */
+    max-width: 200px !important; /* Set a max width for the search area */
 }
 
-.blog-page .form-control:focus {
-    border-color: #a52a2a; /* Highlight border color on focus */
+/* Input Field Styles */
+input.search-input-blogpage {
+    border: 1px solid #ddd !important; /* Light border */
+    border-radius: 12px !important; /* Rounded corners */
+    padding: 10px 20px !important;
+    height: 40px !important; /* Fixed height */
+    flex-grow: 1 !important; /* Input takes available space */
+    max-width: 150px !important; /* Set max width for input */
+    transition: border-color 0.3s ease !important; /* Smooth transition for border color */
 }
 
-.blog-page .btn-outline-success {
-    border-radius: 12px; /* Rounded corners for the button */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for button */
+input.search-input-blogpage:focus {
+    border-color: #a52a2a !important; /* Highlight border color on focus */
 }
 
-.blog-page .btn-outline-success:hover {
-    background-color: #a52a2a; /* Highlight background color on hover */
-    color: #fff; /* White text color on hover */
+/* Button Styles */
+button.search-button-blogpage {
+    border-radius: 12px !important; /* Rounded corners for the button */
+    border: 1px solid #ddd !important; /* Light border */
+    background-color: transparent !important; /* Transparent background */
+    color: #a52a2a !important; /* Default text color */
+    padding: auto !important;
+    font-size: 16px !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s ease, color 0.3s ease !important; /* Smooth transition for button */
+    height: 40px !important; /* Match height with input */
+    width: 80px !important; /* Set width for the button */
 }
+
+/* Button Hover Styles */
+button.search-button-blogpage:hover {
+    background-color: #a52a2a !important; /* Highlight background color on hover */
+    color: #fff !important; /* White text color on hover */
+}
+
+button.search-button-blogpage:focus {
+    outline: none !important; /* Remove the focus outline */
+}
+
+/* Information section styling */
+.search-container-blogpage > div {
+    margin-bottom: 15px; /* Space between items */
+    font-size: 1rem; /* Font size for information items */
+    color: #333; /* Dark text color */
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+.search-container-blogpage i {
+    color: #28a745; /* Green color for icons */
+    margin-right: 10px; /* Space between icon and text */
+    transition: color 0.3s ease; /* Smooth transition for icon color */
+}
+
+.search-container-blogpage i:hover {
+    color: #007bff; /* Highlight icon color on hover */
+}
+
+
 
 /* Information section styling */
 .blog-page .card-body > div {
@@ -1436,3 +1586,138 @@ body {
     font-weight: 700;
     color: #9D2B22; /* Match the color from the image */
 }
+
+/* events page  */
+
+.events-page {
+    background-color: #f9f9f9; /* Light gray background for a clean look */
+    min-height: 100vh; /* Ensure the background covers the full height of the viewport */
+    padding: 20px; /* Add some padding around the content */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+}
+
+/* Center buttons with theme color */
+/* Button Styles */
+.events-page .btn-info {
+    background-color: #a52a2a; /* Theme color */
+    border: 1px solid #ddd; /* Light border */
+    color: #fff; /* White text */
+    font-size: 1rem; /* Font size */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    padding: auto; /* Padding inside button */
+    cursor: pointer; /* Pointer cursor on hover */
+    height: 40px; /* Match height with input */
+    min-width: 100px; /* Set minimum width for button */
+}
+
+.events-page .btn-info:hover {
+    background-color: #8b4513; /* Darker shade of theme color */
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+/* Search Input Styles */
+.events-page .form-control {
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 12px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for input */
+    height: 40px; /* Fixed height */
+    flex-grow: 1; /* Input takes available space */
+    max-width: 200px; /* Set max width for input */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.events-page .form-control:focus {
+    border-color: #a52a2a; /* Highlight border color on focus */
+}
+
+/* Search Button Styles */
+.events-page .btn-outline-success {
+    border-radius: 12px; /* Rounded corners for the button */
+    border: 1px solid #ddd; /* Light border */
+    background-color: transparent; /* Transparent background */
+    color: #a52a2a; /* Default text color */
+    padding: 0; /* Remove default padding */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for button */
+    height: 40px; /* Match height with input */
+    width: 80px; /* Set width for the button */
+}
+
+.events-page .btn-outline-success:hover {
+    background-color: #a52a2a; /* Highlight background color on hover */
+    color: #fff; /* White text color on hover */
+}
+
+
+/* Styling for the card */
+.events-page .card {
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Deep shadow for depth */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+    margin-bottom: 20px; /* Space between cards */
+    display: flex; /* Flexbox for alignment */
+    flex-direction: column; /* Stack content vertically */
+    height: 100%; /* Full height to ensure equal height */
+    overflow: hidden; /* Ensure no overflow of contents */
+    width: 100%; /* Full width of column */
+    max-width: 100%; /* Ensure card width fits within column */
+}
+
+.events-page .card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.events-page .card-body {
+    padding: 20px; /* Padding inside the card body */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center align content */
+    height: 100%; /* Full height for content alignment */
+}
+
+.events-page .card img {
+    width: 100%; /* Full width of the column */
+    height: 200px; /* Fixed height to ensure consistent card sizes */
+    object-fit: cover; /* Cover the container without stretching */
+    border-bottom: 1px solid #ddd; /* Add a border below the image */
+    margin-top: 10px; /* Space above image */
+}
+
+/* Ensure equal height for columns */
+.events-page .col-4 {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: stretch; /* Stretch items to equal height */
+    padding: 10px; /* Add padding */
+    flex: 1; /* Allow columns to grow and fill available space */
+}
+
+/* Center the form in its column */
+.events-page .container-fluid {
+    display: flex;
+    justify-content: center; /* Center form horizontally */
+}
+
+/* Adjust spacing and alignment */
+.events-page .row {
+    margin-bottom: 20px; /* Space between rows */
+}
+
+.button-group {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    gap: 35px; /* Space between buttons */
+    margin-top: 20px; /* Optional: Add some top margin */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center align content */
+}
+
+
+/* event page ends  */
