@@ -17,7 +17,20 @@
         <%- body %>
     </div>
 
-    <%- include("../includes/chatbot.ejs") %>
+
+     
+    <script>
+        window.embeddedChatbotConfig = {
+        chatbotId: "od1YgCx-w78Ccr9D9QHht",
+        domain: "www.chatbase.co"
+        }
+        </script>
+        <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="od1YgCx-w78Ccr9D9QHht"
+        domain="www.chatbase.co"
+        defer>
+    </script>
 
     <%- include("../includes/footer.ejs")%>
     <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script> -->

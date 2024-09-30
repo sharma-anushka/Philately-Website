@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const Review = require("../models/reviewProduct");
 
 const ancillarySchema = new Schema({
     title : String,
@@ -20,7 +21,13 @@ const ancillarySchema = new Schema({
             default: "https://i.ibb.co/2KCdJKw/IMAGE-NOT-FOUND.jpg", 
             set: (v) => v === "" ? "https://i.ibb.co/2KCdJKw/IMAGE-NOT-FOUND.jpg" : v
         },
-    }
+    },
+    reviews : [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Review",
+        }
+    ]
 });
 
 const Product = mongoose.model("Product", ancillarySchema);

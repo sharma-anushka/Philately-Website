@@ -1,4 +1,4 @@
-/* Chatbot button */
+/* Chatbot button
 .chatbot-button {
     position: fixed;
     bottom: 20px;
@@ -17,115 +17,14 @@
     background-size: cover;  
     background-position: center;
     background-repeat: no-repeat;
-}
+} */
 
-.chatbot-button:hover {
-    background-color: #f90505;
-}
-
-/* Chatbot window */
-.chatbot-window {
-    display: none;
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-    width: 350px;
-    height: 500px; /* Adjusted height */
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    font-family: 'Arial', sans-serif;
-    overflow: hidden;
-    border: 5px solid #ffffff;
-    border-image: url('https://i.pinimg.com/originals/47/c8/e7/47c8e711cec0601b99b94805a27ce919.gif') 30 round;
-}
-
-/* Chatbot header */
-.chatbot-header {
-    background-image: url('https://img.freepik.com/free-photo/abstract-luxury-soft-red-background-christmas-valentines-layout-design-studio-room-web-template-business-report-with-smooth-circle-gradient-color_1258-54519.jpg');
-    background-size: cover;
-    background-position: center;
-    color: rgb(255, 255, 255);
+.table-head{
     text-align: center;
-    padding: 15px;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 50px;
-    font-weight: 1000;
-    border-radius: 10px 10px 0 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-/* Chatbot messages area */
-.chatbot-messages {
-    padding: 10px;
-    height: 330px; /* Adjusted height to fit the input area */
-    overflow-y: auto;
-    background-color: #f9f9f9;
-    border-bottom: 1px solid #ff0000;
-}
 
-/* Input area */
-.chatbot-input {
-    padding: 5px;
-    display: flex;
-    background-color: #ffffff;
-    border-top: 1px solid #fd0000;
-}
 
-.chatbot-input input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #060606;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-.chatbot-input button {
-    background-color: #f5811c;
-    color: white;
-    border: none;
-    padding: 10px 12px;
-    margin-left: 8px;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.chatbot-input button:hover {
-    background-color: #f00a0a;
-}
-
-/* Message styling */
-.chatbot-messages div {
-    margin-bottom: 10px;
-    padding: 8px 12px;
-    border-radius: 15px;
-    max-width: 70%;
-    clear: both;
-}
-
-.chatbot-messages .user-message {
-    background-color: #bd0e0e;
-    color: white;
-    float: right;
-}
-
-.chatbot-messages .bot-message {
-    background-color: #d3d2cb;
-    color: #333;
-    float: left;
-}
-
-/* Envelope background for bot message */
-.chatbot-messages .bot-message {
-    background-image: url('https://i.imgur.com/MaGNuTO.png');
-    background-size: cover;
-}
 
 .assam{
     border: solid black;

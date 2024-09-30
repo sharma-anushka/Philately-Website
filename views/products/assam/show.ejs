@@ -6,3 +6,32 @@
         <li><%= product.price %></li>
     </ul>
 </div>
+
+<div class= "col-8">
+    <hr>
+    <h4>
+        Leave a Review !
+    </h4>
+    <form action="/products/assam/<%= product._id %>/review" method="POST">
+        <div class="mb-3">
+            <label fclass="form-label" or="rating">Rating</label>
+            <input class="form-range form-control" type="range" min="1" max="5" name="review[rating]">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="comment">Comments</label>
+            <textarea class="form-control" name="review[comment]" id="comment"></textarea>
+        </div>
+        <button>Submit</button>
+    </form>
+</div>
+
+<div>
+    <h4>
+        All Reviews
+    </h4>
+    <ul>
+        <% for(review of product.reviews) { %>
+            <li> <%= review.comment%> (<%= review.rating%> stars)</li>
+        <%}%>
+    </ul>
+</div>

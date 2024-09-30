@@ -13,6 +13,7 @@ const { savedRedirectUrl } = require("./middleware");
 const Bidding = require("./models/bidding");
 const Blog = require("./models/blogs");
 const Event = require("./models/events");
+const Review = require("./models/reviewProduct");
 
 async function main() {
   await mongoose.connect('mongodb://127.0.0.1:27017/assam');
@@ -59,7 +60,7 @@ app.use((req, res, next) => {
 
 
 app.get("/", (req, res) => {
-    res.render("products/home.ejs");
+    res.render("home.ejs");
 })
 
 //assam
@@ -71,9 +72,24 @@ app.get("/products/assam", async (req, res) => {
 
 app.get("/products/assam/:id", async (req,res) => {
     let { id } = req.params;
-    const product = await Product.findById(id);
+    const product = await Product.findById(id).populate("reviews");
     res.render("products/assam/show.ejs", {product});
 })
+
+//assam-reviews-post
+app.post("/products/assam/:id/review", async (req,res) => {
+    const { id } = req.params;
+    const product = await Product.findById(id);
+    let newReview = new Review(req.body.review);
+
+    product.reviews.push(newReview._id);
+
+    await newReview.save();
+    await product.save();
+
+    res.redirect(`/products/assam/${id}`);
+})
+
 
 //community
 app.get("/community/main", async (req,res) => {
@@ -83,6 +99,7 @@ app.get("/community/main", async (req,res) => {
 
 const Profile = require("./models/profile");
 
+//community-profile
 app.get("/community/profile", async (req, res) => {
     try {
         const profile = await Profile.findOne();  // Fetch the profile data
@@ -93,6 +110,13 @@ app.get("/community/profile", async (req, res) => {
         res.redirect("/");
     }
 });
+
+//community-registerAsBidder
+app.get("/community/registerAsBidder", (req,res) => {
+    res.render("community/register");
+})
+
+
 //signup
 app.get("/signup",(req, res) => {
     res.render("users/signup.ejs");
