@@ -1,38 +1,45 @@
-<% layout("layouts/boilerplate")%>
-<body><br>
-    <div class="row">
-        <div class="col-4"></div>
-        <div class="col-8">
-            <a href="/features/events"><button type="button" class="btn btn-info">Events</button></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="/features/quiz"><button type="button" class="btn btn-info">Quizzes</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="/features/bidding"><button type="button" class="btn btn-info">Bidding</button></a>
-        </div>
-    </div><br>
-    <div class="row">
-        <div class="container-fluid col-6">
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-    </div><br><br>
-    <div class="row">
-      <% for(let ev of event) { %>
-        <div class="col-12">
-            <div class="card" >
-              <div class="card-header" style="text-align: center;">
-                <a href="#">Add to calendar </a>
-              </div>
-                <div class="card-body">
-                  <h5 class="card-title"><%= ev.eventName %></h5>
-                  <h6 class="card-subtitle mb-2 text-body-secondary"><%= ev.description %></h6>
-                  <div>
-                  <a href="#" class="btn btn-primary"><p><%= ev.location %></p></i></a>
-                  <a href="#" class="btn btn-primary"><p><%= ev.eventDate %></p></i></a>
+<% layout("layouts/boilerplate") %>
+<body>
+    <div class="events-page"> <!-- Unique class for scoping -->
+        <br>
+        <div class="row justify-content-center"> <!-- Center the row content -->
+            <div class="col-8">
+                <div class="button-group">
+                    <a href="/features/events"><button type="button" class="btn btn-info">Events</button></a>
+                    <a href="/features/quiz"><button type="button" class="btn btn-info">Quizzes</button></a>
+                    <a href="/features/bidding"><button type="button" class="btn btn-info">Bidding</button></a>
                 </div>
-                </div>
-              </div><br><br>
+            </div>
         </div>
-      <% } %>
+        <br>
+        <div class="row justify-content-center"> <!-- Center the search form -->
+            <div class="container-fluid col-6">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+        <br><br>
+        <div class="row justify-content-center"> <!-- Center the cards -->
+            <% for (let ev of event) { %>
+                <div class="col-12 col-md-8"> <!-- Center cards in a responsive way -->
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <a href="#">Add to calendar</a>
+                        </div>
+                        <div class="card-body text-center"> <!-- Center card body content -->
+                            <h5 class="card-title"><%= ev.eventName %></h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary"><%= ev.description %></h6>
+                            <div>
+                                <a href="#" class="btn btn-primary"><p><%= ev.location %></p></a>
+                                <a href="#" class="btn btn-primary"><p><%= ev.eventDate %></p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                </div>
+            <% } %>
+        </div>
     </div>
 </body>
